@@ -1,0 +1,275 @@
+ek ma khabhar nathi/* Blog Section */
+.blog-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  animation: fadeIn 1s ease-in-out; /* Smooth fade-in animation */
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* Title Underline Animation */
+.section-title::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background-color: #007bff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+
+.section-title:hover::after {
+  width: 100px; /* Expand underline on hover */
+}
+
+/* Blog Container */
+.blog-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: slideUp 1s ease-in-out; /* Slide-up effect */
+}
+
+/* Blog Card Section */
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Blog Card */
+.blog-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Hover Effects */
+.blog-card:hover {
+  transform: translateY(-8px) scale(1.02); /* Lift effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  color: white;
+}
+
+/* Glow Effect on Hover */
+.blog-card:hover::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, rgba(0, 123, 255, 0.3), rgba(0, 212, 255, 0.3));
+  z-index: -1;
+  border-radius: 8px;
+  animation: glowing 1.5s infinite alternate;
+}
+
+/* Background effect on hover */
+.blog-card:hover::before {
+  opacity: 1;
+}
+
+/* Blog Content */
+.blog-content {
+  flex-grow: 1;
+  z-index: 1;
+}
+
+/* Blog Title */
+.blog-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.blog-card:hover .blog-title {
+  color: #fff; /* Change title color on hover */
+}
+
+/* Blog Description */
+.blog-description {
+  margin: 10px 0;
+  color: #555;
+  line-height: 1.5;
+  transition: color 0.3s ease-in-out;
+}
+
+.blog-card:hover .blog-description {
+  color: #e0e0e0;
+}
+
+/* Blog Meta */
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  color: #666;
+  transition: color 0.3s ease-in-out;
+}
+
+.blog-card:hover .blog-meta {
+  color: #ccc;
+}
+
+/* Read More Button */
+.read-more {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
+  align-self: flex-start;
+  z-index: 1;
+}
+
+.read-more:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Create Blog Section */
+.create-blog-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Create Blog Button */
+.create-blog-button {
+  padding: 15px 30px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.create-blog-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Search Bar */
+.search-bar {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Loading, Error, and No Blogs Messages */
+.loading,
+.error-message,
+.no-blogs {
+  text-align: center;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+  color: #dc3545;
+}
+
+.no-blogs {
+  color: #6c757d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blogs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .blogs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+  }
+}

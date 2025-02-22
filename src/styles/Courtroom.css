@@ -1,0 +1,73 @@
+/* Main container styles */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(to bottom, #000000, #1a1a1a, #1a1a1a);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Heading styles */
+h2 {
+    font-family: 'Arial', sans-serif; /* Font family */
+    color: #fff; /* Light text color */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center; /* Centered text */
+}
+
+/* Button styles */
+.button {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient background */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 12px 24px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Button hover effect */
+.button:hover {
+    background: linear-gradient(135deg, #0056b3, #004494); /* Darker gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1002;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Close button styles */
+.close-button {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: transparent;
+    border: none;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Iframe styles */
+.iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
